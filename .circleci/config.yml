@@ -43,6 +43,8 @@ jobs:
             gem install bundler:2.1.4
             bundle update --bundler
             bundle install --jobs=4 --retry=3 --path vendor/bundle
+            bundle exec rake db:create
+            bundle exec rake db:migrate
            
            
 
